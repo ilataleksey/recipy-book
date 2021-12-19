@@ -4,9 +4,12 @@
 
 {% block content %}
     <div class="features">
-        <h1>Главная страница</h1>
+        <h1>{{ title }}</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at tellus et ipsum hendrerit bibendum eu et neque. Ut nec fringilla diam, nec lobortis dui.</p>
         <button class="btn btn-warning">Просмотреть рецепт</button>
-    </div>
 
+        {% for value in values %}
+            <p>{{ value }}</p>
+        {% endfor %}
+    </div>
 {% endblock %}
