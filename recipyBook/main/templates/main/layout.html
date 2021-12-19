@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
-    <link rel="stylesheet" href="https://use.fortawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
@@ -18,9 +18,30 @@
         <span class="logo">Let's cook</span>
         <h3>Навигация</h3>
         <ul>
-            <a href="{% url 'home' %}"><li><i class="fas fa-home"></i>Главная</li></a>
-            <a href="{% url 'about' %}"><li><i class="fas fa-building"></i>О нас</li></a>
-            <a href=""><li><i class="fas fa-address-card"></i>Контакты</li></a>
+            <a href="{% url 'home' %}">
+                <li>
+                    <i class="fas fa-home"></i>
+                    <span class="nav-item">Главная</span>
+                </li>
+            </a>
+            <a href="{% url 'about' %}">
+                <li>
+                    <i class="fas fa-building"></i>
+                    <span class="nav-item">О нас</span>
+                </li>
+            </a>
+            <a href="{% url 'recipes_home' %}">
+                <li>
+                    <i class="fas fa-list-alt"></i>
+                    <span class="nav-item">Все рецепты</span>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <i class="fas fa-address-card"></i>
+                    <span class="nav-item">Контакты</span>
+                </li>
+            </a>
         </ul>
     </aside>
     <main>
