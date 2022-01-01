@@ -5,11 +5,12 @@
 {% block content %}
     <div class="features">
         <h1>{{ title }}</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at tellus et ipsum hendrerit bibendum eu et neque. Ut nec fringilla diam, nec lobortis dui.</p>
-        <button class="btn btn-warning">Просмотреть рецепт</button>
+        <p>Добро пожаловать на страницу с рецептами!</p>
+        <div><a href="{% url 'recipes_home' %}" class="btn btn-warning">Просмотреть все рецепты</a></div><br>
+        <div><a href="{% url 'about' %}" class="btn btn-warning">Узнать больше о нас</a></div>
 
-        {% for value in values %}
-            <p>{{ value }}</p>
-        {% endfor %}
+<!--        {% for value in values %}-->
+<!--            <p>{{ value }}</p>-->
+<!--        {% endfor %}-->
     </div>
 {% endblock %}
