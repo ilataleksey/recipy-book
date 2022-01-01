@@ -5,3 +5,7 @@ from .models import Recipes
 def recipes_home(request):
     recipes = Recipes.objects.order_by('-date')
     return render(request, 'recipes/recipes_home.html', {'recipes': recipes})
+
+
+def create(request):
+    return render(request, 'recipes/create.html')
