@@ -3,8 +3,16 @@
 {% block title %}Форма добавления рецепта{% endblock %}
 
 {% block content %}
-    <div class="features">
+<div class="features" xmlns="http://www.w3.org/1999/html">
         <h1>Форма добавления рецепта</h1>
-
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="Название рецепта" class="form-control"></br>
+            <input type="text" placeholder="Краткое содержание" class="form-control"></br>
+            <textarea placeholder="Рецепт" class="form-control"></textarea></br>
+            <input type="date" class="form-control"></br>
+            <input type="time" class="form-control"></br>
+            <button class="btn btn-success" type="submit">Добавить рецепт</button>
+        </form>
     </div>
 {% endblock %}
