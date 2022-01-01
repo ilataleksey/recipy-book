@@ -9,8 +9,9 @@
             <div class="alert alert-warning">
                 <h3>{{ recipe.title }}</h3>
                 <p>{{ recipe.anons }}</p>
+                <a href="{% url 'recipe' recipe.id %}" class="btn btn-warning">Прочитать рецепт</a>
             </div>
-            <button class="btn btn-warning">Просмотреть рецепт</button>
+
         {% endfor %}
     </div>
 {% endblock %}
