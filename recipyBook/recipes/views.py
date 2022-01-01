@@ -1,11 +1,18 @@
 from django.shortcuts import render, redirect
 from .models import Recipes
 from .forms import RecipesForm
+from django.views.generic import DetailView
 
 
 def recipes_home(request):
     recipes = Recipes.objects.order_by('-date')
     return render(request, 'recipes/recipes_home.html', {'recipes': recipes})
+
+
+class RecipesDetailView(DetailView):
+    model = Recipes
+    template_name = 'recipes/details_view.html'
+    context_object_name = 'recipe'
 
 
 def create(request):

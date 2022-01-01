@@ -1,0 +1,11 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Рецепты{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ recipe.title }}</h1>
+        <p>{{ recipe.date }}</p>
+        <p>{{ recipe.full_text }}</p>
+    </div>
+{% endblock %}
