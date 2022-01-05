@@ -9,6 +9,15 @@
         <div><a href="{% url 'recipes_home' %}" class="btn btn-warning">Просмотреть все рецепты</a></div><br>
         <div><a href="{% url 'about' %}" class="btn btn-warning">Узнать больше о нас</a></div>
 
+        {% if user.is_authenticated %}
+        <p>Hi {{ user.username }}!</p>
+        <a href="{% url 'logout' %}">Выйти</a>
+      {% else %}
+        <p>You are not logged in.</p>
+        <a href="{% url 'login' %}">Вход</a><br>
+        <a href="{% url 'signup' %}">Регистрация</a>
+      {% endif %}
+
 <!--        {% for value in values %}-->
 <!--            <p>{{ value }}</p>-->
 <!--        {% endfor %}-->
