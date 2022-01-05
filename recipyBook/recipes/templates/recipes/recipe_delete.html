@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Удаление рецепта{% endblock %}
+
+{% block content %}
+<div class="features" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+        <h1>Удаление рецепта</h1>
+        <form method="post">
+            {% csrf_token %}
+            <button class="btn btn-success" type="submit">Удалить рецепт</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Recipes
 from .forms import RecipesForm
-from django.views.generic import DetailView
+from django.views.generic import DetailView, UpdateView, DeleteView
 
 
 def recipes_home(request):
@@ -13,6 +13,19 @@ class RecipesDetailView(DetailView):
     model = Recipes
     template_name = 'recipes/details_view.html'
     context_object_name = 'recipe'
+
+
+class RecipesUpdateView(UpdateView):
+    model = Recipes
+    template_name = 'recipes/create.html'
+
+    form_class = RecipesForm
+
+
+class RecipesDeleteView(DeleteView):
+    model = Recipes
+    success_url = '/recipes/'
+    template_name = 'recipes/recipe_delete.html'
 
 
 def create(request):

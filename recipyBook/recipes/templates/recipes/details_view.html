@@ -7,5 +7,8 @@
         <h1>{{ recipe.title }}</h1>
         <p>{{ recipe.date }}</p>
         <p>{{ recipe.full_text }}</p>
+        <a href="{% url 'recipe-delete' recipe.id %}" class="btn btn-danger">Удалить рецепт</a>
+        <a href="{% url 'recipe-update' recipe.id %}" class="btn btn-info">Редактировать рецепт</a>
+
     </div>
 {% endblock %}
